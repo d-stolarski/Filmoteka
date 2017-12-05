@@ -4,6 +4,9 @@ public class Actor {
     private String lastName;
     private String country;
 
+    public Actor() {
+    }
+
     public Actor(String firstName, String lastName, String country) {
         setFirstName(firstName);
         setLastName(lastName);

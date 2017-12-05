@@ -8,6 +8,9 @@ public class TvSeries {
     private String description;
     private double rate;
 
+    public TvSeries() {
+    }
+
     public TvSeries(String name, int seasonsAmount, int episodesAmount, String producent, String genre, String description, double rate) {
         setName(name);
         setSeasonsAmount(seasonsAmount);

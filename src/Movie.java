@@ -7,9 +7,11 @@ public class Movie {
     private String description;
     private double rate;
 
+    public Movie() {
+    }
 
     public Movie(String name, String director, int productionYear, String genre, String description,
-                double rate) {
+                 double rate) {
         setName(name);
         setDirector(director);
         setProductionYear(productionYear);
