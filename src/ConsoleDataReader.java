@@ -16,7 +16,7 @@ public class ConsoleDataReader {
         if (prodYear > 0) {
             movie.setProductionYear(prodYear);
         } else {
-            System.out.println("Błąd! Nie udało się utworzyć obiektu!");
+            showError();
             return null;
         }
         scan.nextLine();
