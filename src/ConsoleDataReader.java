@@ -87,4 +87,6 @@ public class ConsoleDataReader {
     public void showError() {
         System.out.println("Błąd! Nie udało się utworzyć obiektu!");
     }
+
+
 }

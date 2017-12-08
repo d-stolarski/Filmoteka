@@ -20,6 +20,12 @@ public class Movie {
         setRate(rate);
     }
 
+    public void showInfo() {
+        System.out.printf("Tytuł: %s , reżyser: %s , rok produkcji: %d, gatunek: %s, opis: %s, ocena: %.1f\n", getName(),
+                getDirector(), getProductionYear(), getGenre(), getDescription(), getRate());
+    }
+
+
     public void setName(String name) {
         this.name = name;
     }
