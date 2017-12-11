@@ -13,7 +13,7 @@ public class Actor {
         setCountry(country);
     }
 
-    public void showInfo() {
+    public void showActorInfo() {
         System.out.printf("Imię: %s , nazwisko: %s , kraj: %s,\n", getFirstName(),
                 getLastName(), getCountry());
     }

@@ -21,7 +21,7 @@ public class TvSeries {
         setRate(rate);
     }
 
-    public void showInfo() {
+    public void showTvSeriesInfo() {
         System.out.printf("Tytuł: %s , ilość sezonów: %d , ilość odcinków: %d, producent: %s, " +
                         "gatunek: %s, opis: %s, ocena: %.1f\n", getName(),
                 getSeasonsAmount(), getEpisodesAmount(), getProducent(), getGenre(), getDescription(), getRate());
