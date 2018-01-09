@@ -1,17 +1,15 @@
-public class TvSeries {
+package com.example.data;
 
-    private String name;
+public class TvSeries extends Item {
+
     private int seasonsAmount;
     private int episodesAmount;
     private String producent;
-    private String genre;
-    private String description;
-    private double rate;
 
     public TvSeries() {
     }
 
-    public TvSeries(String name, int seasonsAmount, int episodesAmount, String producent, String genre, String description, double rate) {
+    public TvSeries(String name, int seasonsAmount, int episodesAmount, String producent, String genre, String description, int rate) {
         setName(name);
         setSeasonsAmount(seasonsAmount);
         setEpisodesAmount(episodesAmount);
@@ -23,7 +21,7 @@ public class TvSeries {
 
     public void showTvSeriesInfo() {
         System.out.printf("Tytuł: %s , ilość sezonów: %d , ilość odcinków: %d, producent: %s, " +
-                        "gatunek: %s, opis: %s, ocena: %.1f\n", getName(),
+                        "gatunek: %s, opis: %s, ocena: %d\n", getName(),
                 getSeasonsAmount(), getEpisodesAmount(), getProducent(), getGenre(), getDescription(), getRate());
     }
 
@@ -75,11 +73,11 @@ public class TvSeries {
         this.description = description;
     }
 
-    public double getRate() {
+    public int getRate() {
         return rate;
     }
 
-    public void setRate(double rate) {
+    public void setRate(int rate) {
         this.rate = rate;
     }
 }

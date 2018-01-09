@@ -1,3 +1,5 @@
+package com.example.data;
+
 public class Actor {
 
     private String firstName;

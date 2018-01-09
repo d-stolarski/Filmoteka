@@ -1,21 +1,21 @@
+package com.example.logic;
+
+import com.example.data.ApplicationDatabase;
+import com.example.data.Option;
+
 import java.util.Scanner;
 
 public class ApplicationController {
-    public static final int ADD_FILM = 1;
-    public static final int ADD_TVSERIES = 2;
-    public static final int ADD_ACTOR = 3;
-    public static final int SHOW_INFO = 4;
-    public static final int EXIT = 5;
 
     Scanner scan = new Scanner(System.in);
     ApplicationDatabase applicationDatabase = new ApplicationDatabase();
+    Option option;
 
     public void mainLoop() {
-        int choice = 0;
         do {
             printMainMenu();
-            choice = scan.nextInt();
-            switch (choice) {
+            option = userChoice(scan.nextInt());
+            switch (option) {
                 case ADD_FILM:
                     applicationDatabase.addMovie();
                     break;
@@ -34,7 +34,8 @@ public class ApplicationController {
                 default:
                     System.out.println("Nie znaleziono takiej opcji");
             }
-        } while (choice != EXIT);
+        } while (option != Option.EXIT);
+        scan.close();
     }
 
     private void printMainMenu() {
@@ -44,5 +45,21 @@ public class ApplicationController {
         System.out.println("3 - dodaj aktora");
         System.out.println("4 - wyświetl wszystkie informacje");
         System.out.println("5 - zakończ program");
+    }
+
+    private Option userChoice(int choice) {
+        if (choice == 1) {
+            return Option.ADD_FILM;
+        } else if (choice == 2) {
+            return Option.ADD_TVSERIES;
+        } else if (choice == 3) {
+            return Option.ADD_ACTOR;
+        } else if (choice == 4) {
+            return Option.SHOW_INFO;
+        } else if (choice == 5) {
+            return Option.EXIT;
+        } else {
+            return Option.UNSIGNED;
+        }
     }
 }

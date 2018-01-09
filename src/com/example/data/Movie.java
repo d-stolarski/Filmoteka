@@ -1,17 +1,15 @@
-public class Movie {
+package com.example.data;
 
-    private String name;
+public class Movie extends Item {
+
     private String director;
     private int productionYear;
-    private String genre;
-    private String description;
-    private double rate;
 
     public Movie() {
     }
 
     public Movie(String name, String director, int productionYear, String genre, String description,
-                 double rate) {
+                 int rate) {
         setName(name);
         setDirector(director);
         setProductionYear(productionYear);
@@ -21,7 +19,7 @@ public class Movie {
     }
 
     public void showMovieInfo() {
-        System.out.printf("Tytuł: %s , reżyser: %s , rok produkcji: %d, gatunek: %s, opis: %s, ocena: %.1f\n", getName(),
+        System.out.printf("Tytuł: %s , reżyser: %s , rok produkcji: %d, gatunek: %s, opis: %s, ocena: %d\n", getName(),
                 getDirector(), getProductionYear(), getGenre(), getDescription(), getRate());
     }
 
@@ -66,11 +64,11 @@ public class Movie {
         this.description = description;
     }
 
-    public double getRate() {
+    public int getRate() {
         return rate;
     }
 
-    public void setRate(double rate) {
+    public void setRate(int rate) {
         this.rate = rate;
     }
 
